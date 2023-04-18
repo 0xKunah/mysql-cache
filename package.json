@@ -1,0 +1,27 @@
+{
+  "name": "mysql_cache",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "tsc && ts-node test/main.ts",
+    "build": "tsc",
+    "dev": "nodemon"
+  },
+  "keywords": [
+    "mysql",
+    "cache",
+    "database"
+  ],
+  "author": "Kunah",
+  "license": "ISC",
+  "dependencies": {
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.8.4",
+    "ts-node": "^10.9.1",
+    "nodemon": "^2.0.20",
+    "@types/mysql": "^2.15.21",
+    "mysql": "^2.18.1"
+  }
+}
