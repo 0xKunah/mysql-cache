@@ -7,7 +7,7 @@ const mysql_credentials = {
     database: "db_name"
 }
 
-const cache = new Cache(mysql_credentials);
+const cache = new Cache(mysql_credentials, 15000);
 
 cache.on("loaded", async () => {
     console.log("Loaded");
@@ -23,7 +23,6 @@ cache.on("loaded", async () => {
     }, row => row.id === 32);
 
     cache.remove("first", row => row.id === 6);
-    cache.save();
 })
 
 cache.on("change", data => {

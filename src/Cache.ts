@@ -46,6 +46,14 @@ export default class Cache
                 this.trigger("loaded");
             }, 1000);
         });
+
+        // If the save interval is not 0
+        if (this.save_interval > 0) {
+            // Then start the interval
+            setInterval(() => {
+                this.save();
+            }, this.save_interval);
+        }
     }
 
     // Load data from the database
